@@ -15,6 +15,7 @@ public class ParkingSpot {
     public boolean canPark(Vehicle vehicle) {
         // corner case
 
+        // if small type can park in the larger spot -> this.type >= vehicle.getType()
         return this.cur == null && this.type == vehicle.getType();
     }
 

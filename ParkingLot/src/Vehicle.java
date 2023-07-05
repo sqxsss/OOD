@@ -1,7 +1,7 @@
 public abstract class Vehicle {
     // fields
 
-    private Type type;
+    protected Type type;
 
     // methods
 
