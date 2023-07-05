@@ -7,11 +7,12 @@ public class Deck {
 
     private List<Card> cards;
     private int i;
-    private final Random random = new Random();
-
+//    static Random random = new Random();
+    Random random = SingletonRandom.getInstance();
     // methods
 
     public Deck() {
+//        random = new Random();
         cards = new ArrayList<>();
         for (Suit s : Suit.values()) {
             for (int i = 1; i <= 13; i++) {
@@ -23,7 +24,7 @@ public class Deck {
     public void shuffle() {
 //        Random random = new Random();
         for (int i = 0; i < cards.size(); i++) {
-            //        Random random = new Random();
+//            Random random = new Random();
             int j = random.nextInt(cards.size()-i) + i;
             Card card1 = cards.get(i);
             Card card2 = cards.get(i);
